@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Products | Arunai Sacred Soils</title>
+<meta name="description" content="Arunai Sacred Soils: fresh farm products, natural oils, honey, eggs, grains and millets delivered with care.">
+<link rel="icon" type="image/svg+xml" href="../assets/icons/leaf.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+<div id="announce"></div><header id="site-header"></header>
+<main>
+<div class="page-hero"><div class="container"><div class="crumbs"><a href="../index.html">Home</a> / Products</div><h1>Our Products</h1></div></div>
+<section class="section" style="padding-top:40px"><div class="container">
+  <div class="toolbar" role="search">
+    <input type="search" id="f-search" placeholder="Search products by name" aria-label="Search products">
+    <select id="f-category" aria-label="Filter by category"><option value="">All categories</option></select>
+    <select id="f-sort" aria-label="Sort products"><option value="">Sort: Featured</option><option value="price_asc">Price: low to high</option><option value="price_desc">Price: high to low</option><option value="name_asc">Name: A to Z</option><option value="name_desc">Name: Z to A</option></select>
+    <span class="muted" id="result-count" aria-live="polite"></span>
+  </div>
+  <div class="product-grid" id="product-grid"></div>
+</div></section>
+</main>
+<footer id="site-footer"></footer>
+<script src="../js/api.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/products.js"></script>
+</body></html>

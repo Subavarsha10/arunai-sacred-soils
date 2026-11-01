@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Log in | Arunai Sacred Soils</title>
+<meta name="description" content="Arunai Sacred Soils: fresh farm products, natural oils, honey, eggs, grains and millets delivered with care.">
+<link rel="icon" type="image/svg+xml" href="../assets/icons/leaf.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+<div id="announce"></div><header id="site-header"></header>
+<main class="auth-wrap"><div class="auth-card">
+  <img class="logo" src="../assets/images/logo.jpg" alt="Arunai Sacred Soils">
+  <h1>Welcome back</h1><p class="sub">Log in to view your cart, orders and saved addresses.</p>
+  <div id="form-alert" class="alert hidden" role="alert"></div>
+  <form id="login-form" novalidate>
+    <div class="field"><label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email"></div>
+    <div class="field"><label for="password">Password</label><div class="pw-wrap"><input id="password" name="password" type="password" autocomplete="current-password"><button type="button" data-toggle-pw>Show</button></div></div>
+    <button class="btn btn-block" type="submit">Log in</button>
+  </form>
+  <p class="alt">New here? <a href="register.html">Create an account</a></p>
+  <p class="alt"><small>Store admin? <a href="admin.html">Admin sign in</a></small></p>
+</div></main>
+<footer id="site-footer"></footer>
+<script src="../js/api.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/auth.js"></script>
+</body></html>

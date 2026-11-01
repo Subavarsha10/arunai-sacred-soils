@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Checkout | Arunai Sacred Soils</title>
+<link rel="icon" type="image/svg+xml" href="../assets/icons/leaf.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+<div id="announce"></div><header id="site-header"></header>
+<main>
+<div class="page-hero"><div class="container"><div class="crumbs"><a href="../index.html">Home</a> / <a href="cart.html">Cart</a> / Checkout</div><h1>Checkout</h1></div></div>
+<section class="section" style="padding-top:40px"><div class="container">
+<form id="checkout-form" class="checkout-layout" novalidate>
+  <div>
+    <div id="form-alert" class="alert hidden" role="alert"></div>
+    <div class="panel"><h2>Your details</h2>
+      <div class="form-row"><div class="field"><label for="fullName">Full name</label><input id="fullName" name="fullName" autocomplete="name"></div><div class="field"><label for="phone">Phone number</label><input id="phone" name="phone" type="tel" inputmode="numeric" maxlength="10" autocomplete="tel"></div></div>
+      <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email"></div></div>
+    <div class="panel mt"><h2>How would you like to receive your order?</h2>
+      <div class="choice-group">
+        <label class="choice"><input type="radio" name="fulfilment" value="HOME_DELIVERY" checked><span><b>Home delivery</b><small>Free above ₹500, otherwise ₹40.</small></span></label>
+        <label class="choice"><input type="radio" name="fulfilment" value="STORE_PICKUP"><span><b>Store pickup</b><small>No delivery charge. Collect from our store.</small></span></label></div>
+      <div id="pickup-note" class="alert info hidden mt">Pickup address: Arunai Sacred Soils store (address placeholder). We will message you when your order is ready.</div>
+      <div id="address-block" class="mt">
+        <div class="field hidden"><label for="saved-address">Saved addresses</label><select id="saved-address"></select></div>
+        <div class="field"><label for="address">Delivery address</label><input id="address" name="address" autocomplete="street-address" placeholder="House no., street, area"></div>
+        <div class="form-row"><div class="field"><label for="city">City</label><input id="city" name="city" autocomplete="address-level2"></div><div class="field"><label for="state">State</label><input id="state" name="state" autocomplete="address-level1"></div></div>
+        <div class="field"><label for="pin">PIN code</label><input id="pin" name="pin" inputmode="numeric" maxlength="6" autocomplete="postal-code"></div></div></div>
+    <div class="panel mt"><h2>Payment</h2>
+      <div class="alert info">UPI and card options are demonstration only. No real payment is processed and card or UPI details are never stored or sent.</div>
+      <div class="choice-group">
+        <label class="choice"><input type="radio" name="paymentMethod" value="COD" checked><span><b>Cash on Delivery</b><small>Pay when your order arrives or is collected.</small></span></label>
+        <label class="choice"><input type="radio" name="paymentMethod" value="DEMO_UPI"><span><b>UPI <span class="demo-tag">DEMO</span></b><small>Simulated payment.</small></span></label>
+        <label class="choice"><input type="radio" name="paymentMethod" value="DEMO_CARD"><span><b>Credit or debit card <span class="demo-tag">DEMO</span></b><small>Simulated payment.</small></span></label></div>
+      <div id="upi-block" class="mt hidden"><div class="field"><label for="upiId">UPI ID (demo)</label><input id="upiId" name="upiId" placeholder="name@bank" autocomplete="off"></div></div>
+      <div id="card-block" class="mt hidden"><div class="field"><label for="cardNumber">Card number (demo)</label><input id="cardNumber" name="cardNumber" inputmode="numeric" maxlength="19" placeholder="1111 2222 3333 4444" autocomplete="off"></div>
+        <div class="form-row"><div class="field"><label for="cardExpiry">Expiry</label><input id="cardExpiry" name="cardExpiry" placeholder="MM/YY" maxlength="5" autocomplete="off"></div><div class="field"><label for="cardCvv">CVV</label><input id="cardCvv" name="cardCvv" inputmode="numeric" maxlength="3" autocomplete="off"></div></div></div></div>
+  </div>
+  <aside class="panel summary"><h2>Order summary</h2><div id="co-items"></div><hr style="border:none;border-top:1px solid var(--border);margin:12px 0">
+    <div class="sum-row"><span>Subtotal</span><span id="co-subtotal"></span></div><div class="sum-row"><span>Delivery</span><span id="co-delivery"></span></div>
+    <div class="sum-row" id="co-discount-row"><span>Discount (5% on ₹1,000+)</span><span id="co-discount"></span></div><div class="sum-row total"><span>Total</span><span id="co-total"></span></div>
+    <button class="btn btn-block" type="submit" id="place-order" style="margin-top:16px">Place order</button></aside>
+</form></div></section>
+</main>
+<footer id="site-footer"></footer>
+<script src="../js/api.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/checkout.js"></script>
+</body></html>

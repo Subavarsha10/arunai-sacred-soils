@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My account | Arunai Sacred Soils</title>
+<link rel="icon" type="image/svg+xml" href="../assets/icons/leaf.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+<div id="announce"></div><header id="site-header"></header>
+<main>
+<div class="page-hero"><div class="container"><div class="crumbs"><a href="../index.html">Home</a> / My account</div><h1 id="hello">My account</h1><p class="muted" id="member"></p></div></div>
+<section class="section" style="padding-top:40px"><div class="container account-layout" id="account-root">
+  <nav class="panel side-nav" aria-label="Account sections">
+    <button data-tab="profile" class="active">Profile</button><button data-tab="password">Change password</button><button data-tab="addresses">Saved addresses</button><button data-tab="orders">Orders</button><a href="orders.html">Order history and tracking</a><button id="logout-btn">Log out</button></nav>
+  <div>
+    <div class="panel tab" id="tab-profile"><h2>Profile information</h2><div id="profile-alert" class="alert hidden"></div>
+      <form id="profile-form" novalidate><div class="field"><label for="p-name">Full name</label><input id="p-name" name="name"></div>
+        <div class="field"><label for="p-email">Email</label><input id="p-email" name="email" disabled><div class="hint">Email cannot be changed.</div></div>
+        <div class="field"><label for="p-phone">Phone number</label><input id="p-phone" name="phone" inputmode="numeric" maxlength="10"></div><button class="btn" type="submit">Save profile</button></form></div>
+    <div class="panel tab hidden" id="tab-password"><h2>Change password</h2><div id="password-alert" class="alert hidden"></div>
+      <form id="password-form" novalidate><div class="field"><label for="cp">Current password</label><input id="cp" name="currentPassword" type="password" autocomplete="current-password"></div>
+        <div class="field"><label for="np">New password</label><input id="np" name="newPassword" type="password" autocomplete="new-password"><div class="hint">8+ characters with upper and lower case, a number and a symbol.</div></div>
+        <div class="field"><label for="cnp">Confirm new password</label><input id="cnp" name="confirmPassword" type="password" autocomplete="new-password"></div><button class="btn" type="submit">Update password</button></form></div>
+    <div class="panel tab hidden" id="tab-addresses"><h2>Saved addresses</h2><div id="address-list"></div>
+      <h3 style="margin-top:24px">Add an address</h3><div id="address-alert" class="alert hidden"></div>
+      <form id="address-form" novalidate><div class="field"><label for="a-label">Label</label><input id="a-label" name="label" placeholder="Home, Office..."></div>
+        <div class="field"><label for="a-line">Address</label><input id="a-line" name="line1"></div>
+        <div class="form-row"><div class="field"><label for="a-city">City</label><input id="a-city" name="city"></div><div class="field"><label for="a-state">State</label><input id="a-state" name="state"></div></div>
+        <div class="field"><label for="a-pin">PIN code</label><input id="a-pin" name="pin" inputmode="numeric" maxlength="6"></div><button class="btn" type="submit">Save address</button></form></div>
+    <div class="panel tab hidden" id="tab-orders"><h2>Recent orders</h2><div id="recent-orders"></div><a class="btn btn-outline mt" href="orders.html">See all orders</a></div>
+  </div>
+</div></section>
+</main>
+<footer id="site-footer"></footer>
+<script src="../js/api.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/account.js"></script>
+</body></html>

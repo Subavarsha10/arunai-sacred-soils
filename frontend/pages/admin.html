@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Admin | Arunai Sacred Soils</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/svg+xml" href="../assets/icons/leaf.svg">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css"><link rel="stylesheet" href="../css/responsive.css"><link rel="stylesheet" href="../css/admin.css">
+</head>
+<body class="admin-body" id="admin-app">
+<div id="admin-login" class="admin-login hidden"><div class="auth-card">
+  <img class="logo" src="../assets/images/logo.jpg" alt="Arunai Sacred Soils"><h1>Admin sign in</h1><p class="sub">Store management for Arunai Sacred Soils.</p>
+  <div id="admin-login-alert" class="alert hidden" role="alert"></div>
+  <form id="admin-login-form" novalidate>
+    <div class="field"><label for="a-email">Admin email</label><input id="a-email" name="email" type="email" autocomplete="username"></div>
+    <div class="field"><label for="a-pass">Password</label><input id="a-pass" name="password" type="password" autocomplete="current-password"></div>
+    <button class="btn btn-block" type="submit">Sign in</button></form>
+  <p class="alt"><a href="../index.html">← Back to the store</a></p></div></div>
+<div class="admin-shell hidden" id="admin-shell">
+  <aside class="admin-side"><img class="logo" src="../assets/images/logo.jpg" alt="Arunai Sacred Soils">
+    <button class="nav-item" data-sec="dashboard">Dashboard</button><button class="nav-item" data-sec="products">Products</button><button class="nav-item" data-sec="categories">Categories</button>
+    <button class="nav-item" data-sec="orders">Orders</button><button class="nav-item" data-sec="customers">Customers</button><button class="nav-item" data-sec="inventory">Inventory</button>
+    <span class="spacer"></span><a class="nav-item" style="padding:12px 16px" href="../index.html">View store</a><button class="nav-item" id="admin-logout">Log out</button></aside>
+  <main class="admin-main"><div class="admin-top"><h1 id="admin-title">Dashboard</h1></div><div id="admin-content"></div></main>
+</div>
+<script src="../js/api.js"></script><script src="../js/main.js"></script><script src="../js/admin.js"></script>
+</body></html>
